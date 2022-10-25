@@ -1,0 +1,80 @@
+@mixin mobile {
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) and (max-width: $laptop){
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: $laptop) and (max-width: $desktop){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin primary-btn($primary: $greenPrimary) {
+    border: 2px solid $primary;
+    color: $white;
+    font-weight: $semiBold;
+    font-size: 1.5rem;
+    padding: calc($spacing / 4) calc($spacing / 2);
+    background-color: $primary;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    @include transition(all);
+    &:hover{
+        background-color: transparent;
+        cursor: pointer;
+        color: $primary;
+    }
+}
+
+@mixin danger-btn{
+    @include primary-btn(#da1e28)
+}
+
+@mixin secondary-btn {
+    border: 2px solid $greenPrimary;
+    color: $greenPrimary;
+    font-weight: $semiBold;
+    padding: calc($spacing/ 4) calc($spacing/ 2);
+    background-color: transparent;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    font-size: 1.5rem;
+    @include transition(all);
+    &:hover{
+        background-color: $greenPrimary;
+        cursor: pointer;
+        color: $white;
+    }
+}
+
+@mixin transition($value) {
+    transition: $value 0.2s ease-in-out;
+    -webkit-transition: $value 0.2s ease-in-out;
+    -moz-transition: $value 0.2s ease-in-out;
+    -ms-transition: $value 0.2s ease-in-out;
+    -o-transition: $value 0.2s ease-in-out;
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
+}

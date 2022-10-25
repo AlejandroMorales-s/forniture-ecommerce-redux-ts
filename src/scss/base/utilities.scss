@@ -1,0 +1,17 @@
+.container{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+.active-navbar-icon{
+    color: $greenPrimary !important;
+}
+.inactive{
+    display: none;
+}
+.button-disabled{
+    @include secondary-btn;
+}
+.logo{
+    color: $greenPrimary;
+}

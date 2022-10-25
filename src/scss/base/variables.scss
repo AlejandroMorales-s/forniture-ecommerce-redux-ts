@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+$font: 'Poppins', sans-serif;
+
+//* Fuentes
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+
+//* Colors
+$greenPrimary: hsla(92, 19%, 50%, 100%);
+$darkGreen: hsla(70, 38%, 12%, 100%);
+$lightGray: hsla(0, 0, 96%, 100%);
+$gray: hsla(0, 0%, 74%, 100%);
+$darkGray: hsla(0, 0%, 58%, 100%);
+$white: hsla(100, 100%, 100%, 100%);
+
+//* Breakpoints
+$mobile: 359px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1550px;
+
+//* Margins
+$spacing: 5rem;
+
+//* Font Sizes
+$mobileFontSize:
+    "h1" 2.4,
+    "h2" 2.1,
+    "h3" 1.8,
+    "p" 1.4,
+    "li" 1.4,
+    "a" 1.4,
+    "label" 1.4;
